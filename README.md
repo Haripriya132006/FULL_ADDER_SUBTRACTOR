@@ -43,13 +43,39 @@ Borrow out = A'Bin + A'B + BBin
 Write the detailed procedure here
 
 **Program:**
+**Full adder**
+```
+//full adder 
+module ex04(sum,cout,a,b,cin);
+output sum;
+output cout;
+input a;
+input b;
+input cin;
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+//internal nets
+wire sl,cl,c2;
+
+//Instantiate logic gate primitives
+xor (sl,a,b);
+and(cl,a,b);
+xor(sum,sl,cin);
+and(c2,sl,cin);
+or(cout,c2,cl);
+
+endmodule
+```
+
+ Developed by: RegisterNumber:
+
 
 **RTL Schematic**
+**Full adder**
+![Screenshot 2024-03-19 092410](https://github.com/Haripriya132006/FULL_ADDER_SUBTRACTOR/assets/144870747/87dbcb76-fd59-44ba-bb28-d3656f62d911)
 
 **Output Timing Waveform**
+**Full adder**
+![Screenshot 2024-03-19 093507](https://github.com/Haripriya132006/FULL_ADDER_SUBTRACTOR/assets/144870747/cb233d4e-75ec-4674-a081-2b49812f48fd)
 
 **Result:**
 
