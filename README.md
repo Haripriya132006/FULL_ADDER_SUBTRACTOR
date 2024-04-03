@@ -65,17 +65,37 @@ or(cout,c2,cl);
 
 endmodule
 ```
-
- Developed by: RegisterNumber:
+**Full subractor**
+```
+module ex04a (df,bo,a,b,bin);
+output df;
+output bo;
+input a;
+input b;
+input bin;
+wire w1,w2,w3;
+assign w1=a^b;
+assign w2=(~a&b);
+assign w3=(~w1&bin);
+assign df=w1^bin;
+assign bo=w2|w3;
+endmodule
+```
+ Developed by:Haripriya K
+ RegisterNumber:212223220030
 
 
 **RTL Schematic**
 **Full adder**
 ![Screenshot 2024-03-19 092410](https://github.com/Haripriya132006/FULL_ADDER_SUBTRACTOR/assets/144870747/87dbcb76-fd59-44ba-bb28-d3656f62d911)
+**Full subractor**
+![Screenshot 2024-04-03 102815](https://github.com/Haripriya132006/FULL_ADDER_SUBTRACTOR/assets/144870747/6490e095-30ff-4315-b919-41ee83aebf7b)
 
 **Output Timing Waveform**
 **Full adder**
 ![Screenshot 2024-03-19 093507](https://github.com/Haripriya132006/FULL_ADDER_SUBTRACTOR/assets/144870747/cb233d4e-75ec-4674-a081-2b49812f48fd)
+**Full subractor**
+![Screenshot 2024-04-03 103237](https://github.com/Haripriya132006/FULL_ADDER_SUBTRACTOR/assets/144870747/94b847af-5dea-491e-adb2-3f8964806935)
 
 **Result:**
 
